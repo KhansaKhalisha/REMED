@@ -227,7 +227,8 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Gambar</th>\
-                        <td>' + (feature.properties['Gambbar'] !== null ? '<img src="images/' + String(feature.properties['Gambbar']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                    <tr>\
+                        <td>' + (feature.properties['Gambbar'] !== null ? '<img src="images/' + String(feature.properties['Gambbar']).replace(/[\\\/:]/g, '_').trim() .trim() + '" '+ 'class=popupImage' +'>' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
